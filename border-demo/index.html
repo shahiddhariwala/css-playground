@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,11 +15,13 @@
             padding: 20px;
 
         }
-        
+
 
         h1 {
-            border: 5px solid #fff;
-            border-radius: 10px;
+            border-top: 10px solid blue;
+            border-right: 10px solid green;
+            border-bottom: 10px solid yellow;
+            border-left: 10px solid red;
             padding: 1rem;
             text-align: center;
             background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
@@ -34,38 +37,151 @@
                 background-position: 0% 50%;
                 background-size: 30%;
             }
+
             50% {
                 background-position: 100% 50%;
+                border-top: 10px solid red;
+                border-right: 10px solid blue;
+                border-bottom: 10px solid green;
+                border-left: 10px solid yellow;
             }
+
             100% {
                 background-position: 0% 50%;
+                border-top: 10px solid green;
+                border-right: 10px solid yellow;
+                border-bottom: 10px solid red;
+                border-left: 10px solid blue;
             }
         }
 
-       
+
         .playground {
             display: flex;
-            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            flex-direction: column;
+            color: white;
+
+        }
+
+        h2 {
+            font-size: 16px;
         }
 
         .square {
             height: 100px;
             width: 100px;
-            
+
         }
 
         #sq1 {
             border: 5px solid #fff;
         }
+
+        #sq2 {
+            border-left: 5px solid #fff;
+            border-right: 5px solid #fff;
+        }
+
+        #sq3 {
+            border-top: 5px solid #fff;
+            border-bottom: 5px solid #fff;
+        }
+
+        #sq4 {
+            border: 5px solid #fff;
+            border-radius: 10px;
+        }
+
+        #sq5 {
+            border: 5px solid #fff;
+            border-radius: 50%;
+        }
+
+        #sq6,
+        #sq7,
+        #sq9 {
+            border-top: 10px solid blue;
+            border-right: 10px solid green;
+            border-bottom: 10px solid yellow;
+            border-left: 10px solid red;
+        }
+
+        #sq7 {
+            border-top-left-radius: 50%;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 50%;
+        }
+
+        #sq8 {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid #7cd46d;
+        }
+
+        #sq9 {
+            border-top-right-radius: 50px 50px;
+            border-top-left-radius: 20px 50%;
+            border-bottom-left-radius: 10% 20px;
+            border-bottom-right-radius: 50%;
+        }
+
+        /*
+        This is a CSS rule-set that applies to an HTML element with the id sq9. It's defining the border radius properties for each corner of the element, which will give the element rounded corners.
+
+        Here's what each line does:
+
+        border-top-right-radius: 50px 50px; This sets the top right corner's horizontal and vertical radii to 50px, making a quarter-circle curve.
+
+        border-top-left-radius: 20px 50%; This sets the top left corner's horizontal radius to 20px and the vertical radius to 50% of the element's height, creating an elliptical curve.
+
+        border-bottom-left-radius: 10% 20px; This sets the bottom left corner's horizontal radius to 10% of the element's width and the vertical radius to 20px, creating another elliptical curve.
+
+        border-bottom-right-radius: 50%; This sets the bottom right corner's horizontal and vertical radii to 50% of the element's width and height respectively, creating a quarter-circle curve.
+
+        Note: When two values are specified for the border-radius property, the first value is for the horizontal radius and the second value is for the vertical radius. If only one value is specified, it is used for both the horizontal and vertical radii.
+        */
     </style>
 </head>
+
 <body>
     <h1>
-Border Demo
+        Border Demo
     </h1>
 
     <div class="playground">
+
         <div class="square" id="sq1"></div>
+        <h2>Left and right border</h2>
+        <div class="square" id="sq2"></div>
+        <h2>Top and bottom border</h2>
+        <div class="square" id="sq3"></div>
+        <h2>Border on all sides</h2>
+        <div class="square" id="sq6"></div>
+
+        <h2>Triangle using borders</h2>
+        <div class="sqaure" id="sq8"></div>
+
+        <h2>Border radius</h2>
+        <div class="square" id="sq4"></div>
+        <h2>Varying Border Radius 10px</h2>
+        <div class="square" id="sq4"></div>
+
+        <h2>Varying Border Radius 50%</h2>
+        <div class="square" id="sq5"></div>
+
+        <h2>Varying Border Radius top-left, top-right, bottom-left, bottom-right</h2>
+        <div class="square" id="sq7"></div>
+
+        <div class="square" id="sq9"></div>
+
+
+
     </div>
 </body>
+
 </html>
