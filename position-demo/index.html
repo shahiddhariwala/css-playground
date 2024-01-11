@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Demo</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <style>
+        .fixed-position {
+            position: fixed;
+            top: 0;
+            left:0;
+            border: 1px solid red;
+        }
+
+        .fixed-description {
+            font-size: 10px;
+        }
+        .static-position {
+            position: static;
+            border: 1px solid red;
+            /* Also default */
+        }
+        .relative-position {
+            position: relative;
+            left: 20px;
+            top: 30px;
+            border: 1px solid red;
+        }
+        .relative-position-2 {
+            position: relative;
+            border: 1px dotted blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Position Demo</h1>
+        </div>
+        <div class="fixed-position">
+            This is at fixed position
+            <p class="fixed-description">Positioned relative to the browser window, remaining in place while scrolling</p>
+        </div>
+        <div class="static-position">
+            This is at static position
+            <p>Elements follow normal document flow</p>
+        </div>
+        <div class="relative-position">
+            This is at relative position
+            <p>Shifts element from its normal position by specified offsets (e.g., top: 20px).</p>
+        </div>
+        <div class="relative-position-2">
+            This is at relative position
+            <p>Without any offsets</p>
+        </div>
+    </div>
+    
+</body>
+</html>
