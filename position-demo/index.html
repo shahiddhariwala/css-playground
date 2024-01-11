@@ -6,6 +6,7 @@
     <title>Position Demo</title>
     <link rel="stylesheet" href="/styles/index.css">
     <style>
+
         .fixed-position {
             position: fixed;
             top: 0;
@@ -13,7 +14,7 @@
             border: 1px solid red;
         }
 
-        .fixed-description {
+        .fixed-description, .sticky-description {
             font-size: 10px;
         }
         .static-position {
@@ -31,10 +32,26 @@
             position: relative;
             border: 1px dotted blue;
         }
+        .sticky-position {
+            position: sticky;
+            left: 100px;
+            top: 30px;
+            border: 1px solid limegreen;
+        }
+
+        .extra-space {
+            height: 2000px;
+        }
+
+        .fixed-height {
+            height: max-content;
+            display: block;
+            background: linear-gradient(180deg,  black, #311645);
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div class="fixed-height">
         <div>
             <h1>Position Demo</h1>
         </div>
@@ -54,6 +71,12 @@
             This is at relative position
             <p>Without any offsets</p>
         </div>
+        <div class="sticky-position">
+            This is at sticky position
+            <p class=""stick-description> Toggles between relative and fixed based on scroll position, initially relative, then fixed after reaching an offset.</p>
+        </div>
+
+        <div class="extra-space"></div>
     </div>
     
 </body>
